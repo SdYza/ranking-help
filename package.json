@@ -1,0 +1,14 @@
+{
+  "name": "ranking-help",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Painel de ranking OTD da Help Entregas",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node rankings-server.mjs",
+    "check": "node --check rankings-server.mjs"
+  }
+}
