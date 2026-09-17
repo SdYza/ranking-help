@@ -54,7 +54,8 @@ async function performance(period) {
   const { dataInicial, dataFinal } = periodRange(period);
   const url = new URL('/dashboard-financeiro/admin/performance-entregadores', API_BASE);
   url.search = new URLSearchParams({
-    dataInicial, dataFinal, page: '1', limit: '50', orderBy: 'percentualOTD',
+    // O ranking nacional precisa da malha completa, não apenas dos 50 primeiros.
+    dataInicial, dataFinal, page: '1', limit: '500', orderBy: 'percentualOTD',
     orderDirection: 'DESC', minimoCorridas: '5'
   }).toString();
   const response = await fetch(url, {
